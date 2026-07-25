@@ -11,21 +11,16 @@ document.getElementById("totalPrice");
 
 
 
-
-
 function updatePrice(){
 
 
-let result =
-Number(service.value)
-*
-Number(count.value);
+    let total =
+    Number(service.value)
+    *
+    Number(count.value);
 
 
-
-price.textContent =
-result;
-
+    price.textContent = total;
 
 
 }
@@ -53,8 +48,6 @@ updatePrice();
 
 
 
-
-
 const sendButton =
 document.getElementById("sendBooking");
 
@@ -68,8 +61,57 @@ sendButton.addEventListener(
 ()=>{
 
 
+const booking = {
+
+
+name:
+"Новый пользователь",
+
+
+service:
+service.options[
+service.selectedIndex
+].text,
+
+
+count:
+count.value,
+
+
+date:
+document.getElementById("lessonDate").value,
+
+
+time:
+document.getElementById("timeSelect").value,
+
+
+price:
+price.textContent,
+
+
+status:
+"Ожидает подтверждения"
+
+
+
+};
+
+
+
+
+
+console.log(
+"Новая заявка:",
+booking
+);
+
+
+
+
+
 alert(
-"Заявка отправлена. Анна Сергеевна свяжется с вами."
+"Заявка создана! Ожидайте подтверждения."
 );
 
 
