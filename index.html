@@ -530,7 +530,6 @@ class="modal"
 id="bookingModal">
 
 
-
 <div class="modal-content">
 
 
@@ -553,34 +552,35 @@ id="closeBooking">
 
 
 <label>
-Вид занятия
+Выберите услугу
 </label>
 
 
-<select>
+<select id="serviceSelect">
 
 
-<option>
-Диагностика
+<option value="800">
+Диагностика — 800 ₽
 </option>
 
 
-<option>
-Постановка звуков
+<option value="900">
+Постановка звука — 900 ₽
 </option>
 
 
-<option>
-Развитие речи
+<option value="700">
+Развитие речи — 700 ₽
 </option>
 
 
-<option>
-Подготовка к школе
+<option value="1000">
+Подготовка к школе — 1000 ₽
 </option>
 
 
 </select>
+
 
 
 
@@ -592,20 +592,20 @@ id="closeBooking">
 </label>
 
 
-<select>
+<select id="countSelect">
 
 
-<option>
+<option value="1">
 1 занятие
 </option>
 
 
-<option>
+<option value="5">
 5 занятий
 </option>
 
 
-<option>
+<option value="10">
 10 занятий
 </option>
 
@@ -617,32 +617,80 @@ id="closeBooking">
 
 
 
+
 <label>
-Желаемая дата
+Дата занятия
 </label>
 
 
-<input type="date">
+<input 
+type="date"
+id="lessonDate"
+>
 
 
 
 
 
-<p class="price">
+
+<label>
+Желаемое время
+</label>
+
+
+<select id="timeSelect">
+
+
+<option>
+10:00
+</option>
+
+
+<option>
+12:00
+</option>
+
+
+<option>
+15:00
+</option>
+
+
+<option>
+18:00
+</option>
+
+
+</select>
+
+
+
+
+
+
+<h3>
 
 Стоимость:
-800 ₽
 
-</p>
+<span id="totalPrice">
+800
+</span>
+
+₽
+
+</h3>
 
 
 
 
-<button>
 
-Создать заявку
+
+<button id="sendBooking">
+
+Отправить заявку
 
 </button>
+
 
 
 
