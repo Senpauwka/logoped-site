@@ -19,26 +19,59 @@
 <div class="layout">
 
 
-<!-- ЛЕВОЕ МЕНЮ -->
+
+<!-- =========================
+        ЛЕВОЕ МЕНЮ
+========================= -->
+
 
 <aside class="sidebar">
 
-<div class="logo">
+
+<div class="site-logo">
+
+<span id="siteName">
 Название сайта
+</span>
+
 </div>
 
 
-<nav>
 
-<a href="#">👤 Личная информация</a>
+<nav class="menu">
 
-<a href="#">📚 Методический кабинет</a>
 
-<a href="games.html">🎮 Игры</a>
+<a href="#">
+👤 Личная информация
+</a>
 
-<a href="parents.html">👨‍👩‍👧 Инфо для родителей</a>
+
+<a href="materials.html">
+📚 Методический кабинет
+</a>
+
+
+<a href="games.html">
+🎮 Игры
+</a>
+
+
+<a href="parents.html">
+👨‍👩‍👧 Информация для родителей
+</a>
+
 
 </nav>
+
+
+
+<div class="sidebar-footer">
+
+<p>
+Онлайн-логопедические занятия
+</p>
+
+</div>
 
 
 </aside>
@@ -47,24 +80,56 @@
 
 
 
-<!-- ЦЕНТР -->
+
+
+<!-- =========================
+        ЦЕНТРАЛЬНЫЙ БЛОК
+========================= -->
+
 
 <main class="main">
 
 
-<section class="doctor">
+
+
+
+<header class="header">
+
+
+<h1 id="headerTitle">
+
+Название сайта
+
+</h1>
+
+
+</header>
+
+
+
+
+
+
+<!-- СПЕЦИАЛИСТ -->
+
+
+<section class="specialist">
 
 
 <img 
 src="assets/avatar/avatar-placeholder.png"
-alt="Анна Сергеевна">
+class="avatar"
+alt="Фото специалиста"
+>
 
 
-<div>
 
-<h1>
+<div class="specialist-info">
+
+
+<h2>
 Анна Сергеевна
-</h1>
+</h2>
 
 
 <p>
@@ -72,7 +137,13 @@ alt="Анна Сергеевна">
 </p>
 
 
+<span>
+Онлайн-занятия через Google Meet
+</span>
+
+
 </div>
+
 
 
 </section>
@@ -81,74 +152,132 @@ alt="Анна Сергеевна">
 
 
 
-<div class="search">
+
+
+
+<!-- ПОИСК -->
+
+
+<section class="search-block">
+
 
 <input 
-placeholder="Поиск материалов..."
+type="search"
+id="searchInput"
+placeholder="Поиск материалов, игр и упражнений..."
 >
 
-</div>
+
+</section>
 
 
 
 
 
-<section class="carousel">
 
 
-<div class="card">
 
-<h2>
-🏆 Конкурс
-</h2>
+<!-- КАРУСЕЛЬ -->
+
+
+<section class="slider">
+
+
+<button 
+class="slider-btn"
+id="prevSlide">
+←
+</button>
+
+
+
+<div class="slides" id="slides">
+
+
+
+<article class="slide active">
+
+
+<h3>
+🏆 Конкурс рисунков
+</h3>
+
 
 <p>
-Лучшие работы детей
+Лучшие работы детей месяца
 </p>
+
 
 <button>
 Подробнее
 </button>
 
-</div>
+
+</article>
 
 
 
 
-<div class="card">
 
-<h2>
+<article class="slide">
+
+
+<h3>
 🎥 Видео урока
-</h2>
+</h3>
+
 
 <p>
 Фрагмент онлайн-занятия
 </p>
 
+
 <button>
 Смотреть
 </button>
 
-</div>
+
+</article>
 
 
 
 
-<div class="card">
 
-<h2>
-📚 Материал
-</h2>
+<article class="slide">
+
+
+<h3>
+📚 Новый материал
+</h3>
+
 
 <p>
-Новые упражнения
+Полезные упражнения
 </p>
+
 
 <button>
 Открыть
 </button>
 
+
+</article>
+
+
+
 </div>
+
+
+
+
+<button 
+class="slider-btn"
+id="nextSlide">
+
+→
+
+</button>
+
 
 
 </section>
@@ -157,11 +286,30 @@ placeholder="Поиск материалов..."
 
 
 
-<button class="record">
+
+
+
+
+<!-- ЗАПИСЬ -->
+
+
+<section class="booking-preview">
+
+
+<button 
+class="record-btn"
+id="openBooking">
 
 + Записаться на занятие
 
 </button>
+
+
+</section>
+
+
+
+
 
 
 </main>
@@ -172,22 +320,44 @@ placeholder="Поиск материалов..."
 
 
 
-<!-- ПРАВАЯ ЧАСТЬ -->
+
+
+<!-- =========================
+        ПРАВАЯ КОЛОНКА
+========================= -->
+
 
 <aside class="right">
 
 
-<section class="login">
+
+
+
+
+<!-- ЛИЧНЫЙ КАБИНЕТ -->
+
+
+<section class="account">
+
 
 <h2>
 Личный кабинет
 </h2>
 
 
-<input placeholder="Почта">
+
+<input 
+type="email"
+placeholder="Почта"
+>
 
 
-<input placeholder="Пароль">
+
+<input 
+type="password"
+placeholder="Пароль"
+>
+
 
 
 <button>
@@ -195,9 +365,11 @@ placeholder="Поиск материалов..."
 </button>
 
 
+
 <a href="register.html">
 Регистрация
 </a>
+
 
 
 </section>
@@ -206,11 +378,19 @@ placeholder="Поиск материалов..."
 
 
 
+
+
+
+
+<!-- ЧАСЫ -->
+
+
 <section class="clock">
 
-<h2>
+
+<h3>
 Москва
-</h2>
+</h3>
 
 
 <div id="time">
@@ -229,22 +409,91 @@ placeholder="Поиск материалов..."
 
 
 
+
+
+
+
+<!-- КАЛЕНДАРЬ -->
+
+
 <section class="calendar">
 
 
-<h2>
-Календарь
-</h2>
+<div class="calendar-top">
 
 
-<div class="calendar-box">
+<button id="prevMonth">
+←
+</button>
 
-← Июль 2026 →
 
-<br>
+<h3 id="monthTitle">
+Июль 2026
+</h3>
 
-Календарь
 
+<button id="nextMonth">
+→
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div class="week">
+
+<span>Пн</span>
+<span>Вт</span>
+<span>Ср</span>
+<span>Чт</span>
+<span>Пт</span>
+<span>Сб</span>
+<span>Вс</span>
+
+</div>
+
+
+
+
+
+<div 
+id="calendarDays"
+class="days">
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- БУДУЩИЕ УВЕДОМЛЕНИЯ -->
+
+
+<section class="notifications">
+
+
+<h3>
+Уведомления
+</h3>
+
+
+<div id="notificationsList">
+
+Пока уведомлений нет
 
 </div>
 
@@ -252,11 +501,163 @@ placeholder="Поиск материалов..."
 </section>
 
 
+
+
 </aside>
 
 
 
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+       ОКНО ЗАПИСИ
+========================= -->
+
+
+<div 
+class="modal"
+id="bookingModal">
+
+
+
+<div class="modal-content">
+
+
+<button 
+class="close-modal"
+id="closeBooking">
+
+×
+
+</button>
+
+
+
+<h2>
+Запись на занятие
+</h2>
+
+
+
+
+
+<label>
+Вид занятия
+</label>
+
+
+<select>
+
+
+<option>
+Диагностика
+</option>
+
+
+<option>
+Постановка звуков
+</option>
+
+
+<option>
+Развитие речи
+</option>
+
+
+<option>
+Подготовка к школе
+</option>
+
+
+</select>
+
+
+
+
+
+
+<label>
+Количество занятий
+</label>
+
+
+<select>
+
+
+<option>
+1 занятие
+</option>
+
+
+<option>
+5 занятий
+</option>
+
+
+<option>
+10 занятий
+</option>
+
+
+</select>
+
+
+
+
+
+
+<label>
+Желаемая дата
+</label>
+
+
+<input type="date">
+
+
+
+
+
+<p class="price">
+
+Стоимость:
+800 ₽
+
+</p>
+
+
+
+
+<button>
+
+Создать заявку
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 
 <script src="js/main.js"></script>
