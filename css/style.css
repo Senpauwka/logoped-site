@@ -901,3 +901,161 @@ button:hover{
 
 
 }
+
+/* =========================
+        АВТОРИЗАЦИЯ
+========================= */
+
+
+.auth-page{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.auth-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+width:400px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+
+
+.auth-card input{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+}
+
+
+
+.auth-card button{
+
+width:100%;
+
+margin:15px 0;
+
+}
+
+
+
+.auth-card a{
+
+display:block;
+
+margin-top:15px;
+
+color:#2563eb;
+
+text-decoration:none;
+
+}
+
+
+
+
+
+/* =========================
+        ПРОФИЛЬ
+========================= */
+
+
+.profile-page{
+
+padding:30px;
+
+display:grid;
+
+grid-template-columns:
+
+350px 1fr;
+
+gap:25px;
+
+}
+
+
+
+.profile-card,
+.schedule-card,
+.profile-actions{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+
+}
+
+
+
+.lesson-balance{
+
+margin-top:30px;
+
+background:#eff6ff;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+
+
+.lesson-balance span{
+
+font-size:50px;
+
+font-weight:800;
+
+color:#2563eb;
+
+}
+
+
+
+.empty-schedule{
+
+padding:40px;
+
+background:#f8fafc;
+
+border-radius:20px;
+
+text-align:center;
+
+}
