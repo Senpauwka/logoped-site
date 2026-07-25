@@ -1331,3 +1331,22 @@ grid-template-columns:1fr;
 
 
 }
+
+.booking-form label{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:600;
+
+}
+
+
+.modal-content h3{
+
+margin-top:25px;
+
+font-size:22px;
+
+}
