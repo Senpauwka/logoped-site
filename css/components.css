@@ -115,3 +115,41 @@ transition:.3s;
 transform:translateY(-8px);
 
 }
+
+.carousel-card{
+
+text-decoration:none;
+
+color:#222;
+
+overflow:hidden;
+
+}
+
+.carousel-card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+}
+
+.carousel-card h3{
+
+margin-bottom:10px;
+
+}
+
+.carousel-card p{
+
+line-height:1.5;
+
+color:#666;
+
+}
