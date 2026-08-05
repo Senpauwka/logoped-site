@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Конкурс рисунков",
+    "description": "Лучшие работы учеников месяца.",
+    "image": "assets/images/contest-placeholder.png",
+    "link": "contests.html"
+  },
+  {
+    "title": "Видео занятия",
+    "description": "Фрагмент онлайн-урока.",
+    "image": "assets/images/video-placeholder.png",
+    "link": "materials.html"
+  },
+  {
+    "title": "Методические материалы",
+    "description": "Упражнения для самостоятельной работы.",
+    "image": "assets/images/logo-placeholder.png",
+    "link": "materials.html"
+  }
+]
