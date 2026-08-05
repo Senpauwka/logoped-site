@@ -375,3 +375,126 @@ transition:.3s;
 background:#135fd1;
 
 }
+
+.contest-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+padding:40px;
+
+}
+
+.contest-card{
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+text-align:center;
+
+}
+
+.contest-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.contest-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.place{
+
+display:inline-block;
+
+margin:20px 0 10px;
+
+padding:8px 16px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+}
+
+.gold{
+
+background:#FFD700;
+
+}
+
+.silver{
+
+background:#D8D8D8;
+
+}
+
+.bronze{
+
+background:#D79A55;
+
+color:white;
+
+}
+
+.contest-card h2{
+
+margin-bottom:10px;
+
+}
+
+.contest-card p{
+
+padding:0 20px;
+
+margin-bottom:20px;
+
+color:#666;
+
+}
+
+.contest-card button{
+
+margin:0 20px 25px;
+
+width:calc(100% - 40px);
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+background:#2b7cff;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.contest-card button:hover{
+
+background:#135fd1;
+
+}
+
