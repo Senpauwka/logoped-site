@@ -3,87 +3,85 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Регистрация</title>
+    <title>Регистрация</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+<div class="auth-container">
 
+    <form id="registerForm" class="auth-form">
 
-<div class="auth-page">
+        <h1>Регистрация</h1>
 
+        <input
+            type="text"
+            id="name"
+            placeholder="Имя"
+            required>
 
-<div class="auth-card">
+        <input
+            type="email"
+            id="email"
+            placeholder="Почта"
+            required>
 
+        <input
+            type="password"
+            id="password"
+            placeholder="Пароль"
+            required>
 
-<h1>
-Регистрация
-</h1>
+        <button type="submit">
 
+            Зарегистрироваться
 
-<p>
-Создание аккаунта ученика
-</p>
+        </button>
 
+        <p>
 
+            Уже есть аккаунт?
 
-<input
-type="text"
-placeholder="Имя и фамилия"
->
+            <a href="login.html">
 
+                Войти
 
-<input
-type="email"
-placeholder="Почта"
->
+            </a>
 
+        </p>
 
-
-<input
-type="password"
-placeholder="Пароль"
->
-
-
-
-<input
-type="password"
-placeholder="Повторите пароль"
->
-
-
-
-
-<button>
-
-Создать аккаунт
-
-</button>
-
-
-
-
-<a href="login.html">
-
-Уже есть аккаунт? Войти
-
-</a>
-
+    </form>
 
 </div>
 
+<script src="js/auth.js"></script>
 
-</div>
+<script>
 
+document
+.getElementById("registerForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    login(name,email);
+
+});
+
+</script>
 
 </body>
 
