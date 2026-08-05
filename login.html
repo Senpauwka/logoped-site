@@ -73,6 +73,25 @@ placeholder="Введите пароль"
 
 </div>
 
+<script src="js/auth.js"></script>
+
+<script>
+
+document
+.getElementById("loginForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const email =
+document.getElementById("email").value;
+
+login("Пользователь", email);
+
+});
+
+</script>
+
 
 </body>
 
