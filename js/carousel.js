@@ -2,71 +2,27 @@ const carousel = document.querySelector(".carousel");
 
 if (carousel) {
 
-const cards = carousel.children;
+fetch("data/services.json")
+.then(response => response.json())
+.then(cards => {
 
-let current = 0;
+carousel.innerHTML = "";
 
-function updateCarousel() {
+cards.forEach(card => {
 
-const width = cards[0].offsetWidth + 20;
+carousel.innerHTML += `
+<a href="${card.link}" class="carousel-card">
 
-carousel.scrollTo({
+<img src="${card.image}" alt="${card.title}">
 
-left: current * width,
+<h3>${card.title}</h3>
 
-behavior: "smooth"
+<p>${card.description}</p>
 
-});
-
-}
-
-setInterval(() => {
-
-current++;
-
-if (current >= cards.length) {
-
-current = 0;
-
-}
-
-updateCarousel();
-
-}, 5000);
-
-let startX = 0;
-
-carousel.addEventListener("touchstart", e => {
-
-startX = e.touches[0].clientX;
+</a>
+`;
 
 });
-
-carousel.addEventListener("touchend", e => {
-
-let endX = e.changedTouches[0].clientX;
-
-if (startX - endX > 50) {
-
-current++;
-
-}
-
-else if (endX - startX > 50) {
-
-current--;
-
-}
-
-if (current < 0)
-
-current = 0;
-
-if (current >= cards.length)
-
-current = cards.length - 1;
-
-updateCarousel();
 
 });
 
