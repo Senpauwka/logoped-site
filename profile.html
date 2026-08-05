@@ -141,7 +141,21 @@ example@mail.ru
 </div>
 
 
+<script src="js/auth.js"></script>
 
+<script>
+
+const user = getUser();
+
+if(!user.loggedIn){
+
+location.href = "login.html";
+
+}
+
+document.getElementById("username").textContent = user.name;
+
+</script>
 
 </body>
 
