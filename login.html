@@ -4,72 +4,54 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Вход | Название сайта</title>
+<title>Вход</title>
 
 <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+<div class="auth-container">
 
-<div class="auth-page">
+<form id="loginForm" class="auth-form">
 
+<h1>Вход</h1>
 
-<div class="auth-card">
-
-
-<h1>
-Вход
-</h1>
-
-
-<p>
-Личный кабинет ученика
-</p>
-
-
-
-<input 
+<input
 type="email"
-placeholder="Введите почту"
->
+id="email"
+placeholder="Почта"
+required>
 
-
-<input 
+<input
 type="password"
-placeholder="Введите пароль"
->
+id="password"
+placeholder="Пароль"
+required>
 
+<button type="submit">
 
-
-<button>
 Войти
+
 </button>
 
+<p>
 
-
+Нет аккаунта?
 
 <a href="register.html">
 
-Нет аккаунта? Регистрация
+Регистрация
 
 </a>
 
+</p>
 
-
-<a href="index.html">
-
-← Вернуться на главную
-
-</a>
-
-
-</div>
-
+</form>
 
 </div>
 
@@ -79,19 +61,29 @@ placeholder="Введите пароль"
 
 document
 .getElementById("loginForm")
-.addEventListener("submit", function(e){
+.addEventListener("submit",function(e){
 
 e.preventDefault();
 
 const email =
 document.getElementById("email").value;
 
-login("Пользователь", email);
+const user =
+JSON.parse(localStorage.getItem("user"));
+
+if(user.email===email){
+
+location.href="profile.html";
+
+}else{
+
+alert("Пользователь не найден.");
+
+}
 
 });
 
 </script>
-
 
 </body>
 
