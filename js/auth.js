@@ -18,6 +18,7 @@ function login(name, email) {
         name,
         email,
         loggedIn: true
+        lessons: 0
     };
 
     localStorage.setItem("user", JSON.stringify(user));
