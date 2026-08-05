@@ -1,145 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Личный кабинет</title>
 
-<title>Личный кабинет</title>
-
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
 
 </head>
 
-
-
 <body>
-
-
 
 <div class="profile-page">
 
+    <div class="profile-card">
 
+        <img
+            src="assets/avatar/avatar-placeholder.png"
+            class="avatar"
+            alt="Аватар пользователя">
 
-<div class="profile-card">
+        <h1 id="username">
+            Гость
+        </h1>
 
+        <p id="useremail">
+            example@mail.ru
+        </p>
 
+        <div class="lesson-balance">
 
-<img 
-src="assets/avatar/avatar-placeholder.png"
-class="avatar"
->
+            <h2>
+                Осталось занятий
+            </h2>
 
+            <span id="lessonCount">
+                0
+            </span>
 
+        </div>
 
+    </div>
 
-<h1>
-Иван Иванов
-</h1>
+    <div class="schedule-card">
 
+        <h2>
+            Расписание занятий
+        </h2>
 
-<p>
-example@mail.ru
-</p>
+        <div class="empty-schedule">
 
+            У вас пока нет занятий
 
+            <br><br>
 
-<div class="lesson-balance">
+            <button onclick="location.href='services.html'">
+                Записаться
+            </button>
 
+        </div>
 
-<h2>
-Осталось занятий
-</h2>
+    </div>
 
+    <div class="profile-actions">
 
-<span>
-0
-</span>
+        <button onclick="location.href='services.html'">
+            + Пополнить занятия
+        </button>
 
+        <button onclick="alert('История занятий пока находится в разработке.')">
+            История занятий
+        </button>
 
-</div>
+        <button onclick="logout()">
+            Выйти
+        </button>
 
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="schedule-card">
-
-
-
-<h2>
-Расписание занятий
-</h2>
-
-
-
-<div class="empty-schedule">
-
-
-У вас пока нет занятий
-
-
-
-<br><br>
-
-
-<button>
-
-Записаться
-
-</button>
-
+    </div>
 
 </div>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="profile-actions">
-
-
-<button>
-
-+ Пополнить занятия
-
-</button>
-
-
-
-<button>
-
-История занятий
-
-</button>
-
-
-
-</div>
-
-
-
-
-</div>
-
 
 <script src="js/auth.js"></script>
 
@@ -147,21 +91,14 @@ example@mail.ru
 
 const user = getUser();
 
-if(!user.loggedIn){
-
-location.href = "login.html";
-
+if (!user.loggedIn) {
+    location.href = "login.html";
 }
 
 document.getElementById("username").textContent = user.name;
+document.getElementById("useremail").textContent = user.email;
 
 </script>
-
-<button onclick="logout()">
-
-Выйти
-
-</button>
 
 </body>
 
