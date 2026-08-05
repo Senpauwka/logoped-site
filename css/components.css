@@ -153,3 +153,55 @@ line-height:1.5;
 color:#666;
 
 }
+
+.info-container{
+
+max-width:1100px;
+
+margin:40px auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+padding:20px;
+
+}
+
+.info-card{
+
+background:#fff;
+
+border-radius:20px;
+
+padding:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.info-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.info-card h2{
+
+margin-bottom:15px;
+
+color:#2b7cff;
+
+}
+
+.info-card p{
+
+line-height:1.7;
+
+color:#555;
+
+}
